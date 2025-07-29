@@ -29,6 +29,7 @@ urlpatterns = [
     path('listings/', views.listings_list, name='listings-list'),
     path('listings/<int:id>/', views.listings_detail, name='listings-detail'),
     path('listings/<int:id>/update/', views.listings_update, name='listings-update'),
+    path('listings/<int:id>/delete/', views.listings_delete, name='listings-delete'),
     path('listings/add/', views.listings_create, name='listings-create'),
     path('contact-us/', views.contact, name='contact'),
     path('email-sent/', views.email_sent, name='email-sent')
