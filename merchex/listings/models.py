@@ -19,6 +19,7 @@ class Band(models.Model):
     )
     active = models.fields.BooleanField(default=True)
     official_homepage = models.fields.URLField(null=True, blank=True)
+    # like_new = models.fields.BooleanField(default=False)
 
 class Article(models.Model):
 
@@ -38,3 +39,4 @@ class Article(models.Model):
         validators=[MinValueValidator(1900), MaxValueValidator(2025)]
     )
     type = models.fields.CharField(choices=Type.choices, max_length=10)
+    band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
