@@ -12,5 +12,6 @@
 
 <p>{{ article.description }}</p>
 
+<a href="{% url 'listings-update' article.id %}">Mettre à jour</a>
 <a href="{% url 'listings-list' %}">Retour aux articles</a>
 {% endblock %}

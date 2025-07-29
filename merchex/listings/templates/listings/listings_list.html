@@ -2,10 +2,14 @@
 
 {% block content %}
     <h1>Articles</h1>
+
+    <a href="{% url 'listings-create' %}">Créer un article</a>
+    
     <p>Les articles disponibles sont:</p>
     <ul>
         {% for article in articles %}
         <li><a href="{% url 'listings-detail' article.id %}">{{ article.title }}</a></li>
         {% endfor %}
     </ul>
+
 {% endblock %}
